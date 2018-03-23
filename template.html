@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+        }
+        .header {
+        }
+
+        .image{
+        position: relative;
+        }
+        .image a{
+        display: block;
+        position: absolute;
+        /*background-color: red;*/
+        }
+
+        .selected {
+            border: 3px solid blue;
+            border-radius: 5px;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 15px #9ecaed;
+        }
+
+        .multi-selected {
+            border: 3px solid red;
+            border-radius: 5px;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 15px #9ecaed;
+        }
+
+        .properties li {
+            display: block;
+            float: left;
+            width: 33%;
+        }
+
+        .highlight {
+            box-shadow: inset 0 0 10px yellow;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            $("#filter input:checkbox").change(highlight);
+        });
+
+        function getPinDescription(id) {
+            info = pins[id_to_pin[id]]
+            content = "<h2>" + id_to_pin[id] + "</h2>";
+            content += "<p>" + info["description"] + "</p>"
+            peripherals = info["peripherals"].join(", ");
+            if (peripherals.length != 0) {
+                content += "<h3>Peripherals</h3><p>" + peripherals + "</p>";
+            }
+            functions = info["functions"].join(", ");
+            if (functions.length != 0) {
+                content += "<h3>Functions</h3><p>" + functions + "</p>";
+            }
+            return content;
+        }
+
+        var selected = null;
+        var multiSelected = []
+
+        function showPinInfo(id) {
+            $(".pin").removeClass("selected");
+            if (!id) {
+                $("#pin-info").html("");
+                return;
+            }
+            $("#pin-info").html(getPinDescription(id));
+            $("." + id).addClass("selected");
+        }
+
+        function showPinsInfo(ids) {
+            $(".multi-selected").removeClass("multi-selected");
+            content = "";
+            ids.forEach(function(id) {
+                content += getPinDescription(id);
+                $("." + id).addClass("multi-selected");
+            });
+            $("#pins-info").html(content);
+        }
+
+        function pinMouseEnter(id) {
+            showPinInfo(id);
+        }
+
+        function pinMouseLeave(id) {
+            showPinInfo(selected);
+        }
+
+        function pinMouseClick(ev, id) {
+            if (ev.ctrlKey) {
+                index = multiSelected.indexOf(id);
+                if (index == -1) {
+                    multiSelected.push(id);
+                }
+                else {
+                    multiSelected.splice(index, 1);
+                }
+                showPinsInfo(multiSelected);
+            }
+            else {
+                selected = id;
+                showPinInfo(id);
+            }
+        }
+
+        function highlight() {
+            $(".pin").removeClass("highlight");
+            var vals = $('#general-features input:checkbox:checked').map(function() {
+                return this.name;
+            }).get();
+            vals = new Set(vals)
+
+            for (pin in pins) {
+                if (pins[pin]["general features"].filter(x => vals.has(x)).length > 0) {
+                    $("." + pin_to_id[pin]).addClass("highlight");
+                }
+            }
+
+            var vals = $('#peripherals input:checkbox:checked').map(function() {
+                return this.name;
+            }).get();
+            vals = new Set(vals)
+
+            for (pin in pins) {
+                if (pins[pin]["peripherals"].filter(x => vals.has(x)).length > 0) {
+                    $("." + pin_to_id[pin]).addClass("highlight");
+                }
+            }
+        }
+    </script>
+
+    <title>
+        Board name
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <h1 id="name"></h1>
+        </div>
+
+        <div class="row" id="filter">
+            <h3>Highlight:</h3>
+            <ul class="col-md-6 properties" id="general-features">
+                <h4>General features</h4>
+            </ul>
+            <ul class="col-md-6 properties" id="peripherals">
+                <h4>Peripherals</h4>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="image" id="board">
+                    <img src="board.svg" width="100%"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="pin-info"></div>
+                <hr/>
+                <div id="pins-info"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

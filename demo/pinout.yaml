@@ -1,0 +1,748 @@
+name: RB3200 ESP32 Universal
+pins:
+  GND:
+    description: Common ground
+    general features:
+      - power
+    peripherals: []
+    functions: []
+  +5V:
+    description: 5V power rail
+    general features:
+      - power
+    peripherals: []
+    functions: []
+  +3V3:
+    description: 3V3 power rail
+    general features:
+      - power
+    peripherals: []
+    functions: []
+  ServoSignalIn1:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 1]
+  ServoSignalIn1:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 2]
+  ServoSignalIn2:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 3]
+  ServoSignalIn3:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 4]
+  ServoSignalIn4:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 5]
+  ServoSignalIn5:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 6]
+  ServoSignalIn6:
+    description: >
+      Connect arbitrary IO pin to this pin to supply signal for corresponding
+      ServoSignalOut
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 7]
+  ServoSignalOut1:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 1]
+  ServoSignalOut1:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 1]
+  ServoSignalOut2:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 2]
+  ServoSignalOut3:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 3]
+  ServoSignalOut4:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 4]
+  ServoSignalOut5:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 5]
+  ServoSignalOut6:
+    description: >
+      RC servo signal. IO pin needs to be connected to corresponding
+      ServoSignalIn
+    general features:
+      - servo
+    peripherals: []
+    functions: [servo 6]
+  IO 00 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 02 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 04 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 05 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 12 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 13 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 14 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 15 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 16 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 17 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 18 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 19 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 21 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 22 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 23 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 25 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 26 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 27 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 32 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 34 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 35 protected:
+    description: >
+      IO pin with protective resistor
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  TXD protected:
+    description: >
+      Serial line
+    general features:
+      - Serial
+    peripherals: [ GPIO, Serial ]
+    functions: []
+  RXD protected:
+    description: >
+      Serial line
+    general features:
+      - Serial
+    peripherals: [ GPIO, Serial ]
+    functions: []
+  Seson VP protested:
+    description: >
+      Some kind of sensor. Who knows
+    general features:
+      - Sensor
+    peripherals: [ GPIO, Sensor ]
+    functions: []
+  Seson VN protested:
+    description: >
+      Some kind of sensor. Who knows
+    general features:
+      - Sensor
+    peripherals: [ GPIO, Sensor ]
+    functions: []
+  IO 00:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 02:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 04:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 05:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 12:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 13:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 14:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 15:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 16:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 17:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 18:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 19:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 21:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 22:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 23:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 25:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 26:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 27:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 32:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 34:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  IO 35:
+    description: >
+      IO pin
+    general features:
+      - GPIO
+    peripherals: [ GPIO ]
+    functions: []
+  TXD:
+    description: >
+      Serial line
+    general features:
+      - Serial
+    peripherals: [ GPIO, Serial ]
+    functions: []
+  RXD:
+    description: >
+      Serial line
+    general features:
+      - Serial
+    peripherals: [ GPIO, Serial ]
+    functions: []
+  Seson VP protested:
+    description: >
+      Some kind of sensor. Who knows
+    general features:
+      - Sensor
+    peripherals: [ GPIO, Sensor ]
+    functions: []
+  Seson VN protested:
+    description: >
+      Some kind of sensor. Who knows
+    general features:
+      - Sensor
+    peripherals: [ GPIO, Sensor ]
+    functions: []
+mapping:
+  - position: [3.1, 11.4, 16.5, 54]
+    size: [6, 18]
+    pins:
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+      - ServoSignalOut1
+      - ServoSignalOut2
+      - ServoSignalOut3
+      - ServoSignalOut4
+      - ServoSignalOut5
+      - ServoSignalOut6
+      - ServoSignalIn1
+      - ServoSignalIn2
+      - ServoSignalIn3
+      - ServoSignalIn4
+      - ServoSignalIn5
+      - ServoSignalIn6
+      - +5V
+      - +3V3
+      - GND
+      - IO 15 protected
+      - IO 15 protected
+      - IO 15 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 02 protected
+      - IO 02 protected
+      - IO 02 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 00 protected
+      - IO 00 protected
+      - IO 00 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 04 protected
+      - IO 04 protected
+      - IO 04 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 16 protected
+      - IO 16 protected
+      - IO 16 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 17 protected
+      - IO 17 protected
+      - IO 17 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 05 protected
+      - IO 05 protected
+      - IO 05 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 18 protected
+      - IO 18 protected
+      - IO 18 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 19 protected
+      - IO 19 protected
+      - IO 19 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 21 protected
+      - IO 21 protected
+      - IO 21 protected
+      - +5V
+      - +3V3
+      - GND
+      - RXD protected
+      - RXD protected
+      - RXD protected
+      - +5V
+      - +3V3
+      - GND
+      - TXD protected
+      - TXD protected
+      - TXD protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 22 protected
+      - IO 22 protected
+      - IO 22 protected
+      - +5V
+      - +3V3
+      - GND
+      - IO 23 protected
+      - IO 23 protected
+      - IO 23 protected
+  - position: [78, 26.2, 16.7, 39]
+    size: [6, 13]
+    pins:
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+  - position: [21.3, 10.9, 2.3, 23.5]
+    size: [1, 8]
+    pins:
+      - +5V
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - +5V
+      - +5V
+  - position: [21.3, 36.3, 2.3, 29.4]
+    size: [1, 10]
+    pins:
+      - +5V
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+  - position: [29.3, 23.4, 3, 42]
+    size: [1, 14]
+    pins:
+      - IO 15
+      - IO 02
+      - IO 00
+      - IO 04
+      - IO 16
+      - IO 17
+      - IO 05
+      - IO 18
+      - IO 19
+      - IO 21
+      - RXD
+      - TXD
+      - IO 22
+      - IO 23
+  - position: [65.4, 26.5, 3, 36]
+    size: [1, 12]
+    pins:
+      - +5V
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+      - +5V
+      - GND
+  - position: [73.9, 10.6, 2.5, 17.8]
+    size: [1, 6]
+    pins:
+      - +5V
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+  - position: [73.9, 31.5, 2.5, 23.7]
+    size: [1, 8]
+    pins:
+      - +5V
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+      - GND
+
